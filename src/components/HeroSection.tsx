@@ -3,6 +3,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Users, Calendar } from 'lucide-react';
 
+// Featured upcoming event data 
+const UPCOMING_EVENT = {
+  id: 1,
+  title: "Humla: Advanced Penetration Testing",
+  date: "March 25, 2025",
+  type: "Humla",
+  description: "Join us for an intensive hands-on workshop focused on advanced penetration testing techniques and methodologies."
+};
+
 const HeroSection = () => {
   return (
     <div className="relative overflow-hidden bg-background bg-circuit-pattern">
@@ -20,41 +29,24 @@ const HeroSection = () => {
               <Link to="/register" className="btn-primary">
                 Join the Community
               </Link>
-              <Link to="/ctf" className="btn-outline">
-                Explore CTFs
+              <Link to="/events" className="btn-outline">
+                Explore Events
               </Link>
             </div>
           </div>
           <div className="glass rounded-xl p-6 md:p-8">
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <Shield className="h-8 w-8 text-primary flex-shrink-0" />
-                <div>
-                  <h3 className="font-medium text-primary">CTF Competitions</h3>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    Test your skills in our Capture The Flag competitions designed for all skill levels.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Users className="h-8 w-8 text-primary flex-shrink-0" />
-                <div>
-                  <h3 className="font-medium text-primary">Community Meetups</h3>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    Join our monthly meetups to network and learn from security professionals.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Calendar className="h-8 w-8 text-primary flex-shrink-0" />
-                <div>
-                  <h3 className="font-medium text-primary">Workshops & Training</h3>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    Regular workshops on cybersecurity tools, techniques, and best practices.
-                  </p>
-                </div>
-              </div>
+            <h3 className="font-medium text-xl text-primary mb-4">Upcoming Event</h3>
+            <div className="mb-4">
+              <span className="text-xs px-2 py-1 glass-dark rounded-full mb-2 inline-block">
+                {UPCOMING_EVENT.type}
+              </span>
+              <h4 className="text-lg font-semibold">{UPCOMING_EVENT.title}</h4>
+              <p className="text-sm text-muted-foreground mt-1">{UPCOMING_EVENT.date}</p>
             </div>
+            <p className="text-sm mb-4">{UPCOMING_EVENT.description}</p>
+            <Link to={`/events/${UPCOMING_EVENT.id}`} className="btn-primary inline-block">
+              Register Now
+            </Link>
           </div>
         </div>
       </div>

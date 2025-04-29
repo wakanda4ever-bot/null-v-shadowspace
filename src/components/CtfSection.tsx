@@ -50,7 +50,7 @@ const CtfCard = ({ event }) => {
       </div>
       <div className="mt-6">
         {event.registrationOpen ? (
-          <Link to={`/ctf/${event.id}`} className="btn-primary w-full text-center">
+          <Link to={`/events/ctf/${event.id}`} className="btn-primary w-full text-center">
             Register Now
           </Link>
         ) : (
@@ -68,7 +68,7 @@ const CtfSection = () => {
     <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary/20">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold font-mono">Upcoming CTF Events</h2>
+          <h2 className="text-3xl font-bold font-mono">CTF Events</h2>
           <p className="mt-4 text-muted-foreground">
             Test your skills in our cybersecurity challenges and compete with other security enthusiasts.
           </p>
@@ -81,7 +81,7 @@ const CtfSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <Link to="/ctf" className="btn-outline">
+          <Link to="/events/ctf" className="btn-outline">
             View All CTF Events
           </Link>
         </div>
