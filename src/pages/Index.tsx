@@ -6,6 +6,8 @@ import HeroSection from '../components/HeroSection';
 import CtfSection from '../components/CtfSection';
 import MeetupSection from '../components/MeetupSection';
 import AboutSection from '../components/AboutSection';
+import EventHighlightsSection from '../components/EventHighlightsSection';
+import TwitterFeedSection from '../components/TwitterFeedSection';
 
 const Index = () => {
   return (
@@ -13,9 +15,11 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <HeroSection />
-        <CtfSection />
+        <EventHighlightsSection />
         <MeetupSection />
+        <CtfSection />
         <AboutSection />
+        <TwitterFeedSection />
       </main>
       <Footer />
     </div>
